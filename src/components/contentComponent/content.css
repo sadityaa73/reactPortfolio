@@ -1,16 +1,32 @@
-.contentContainer{
-    display: flex;
-    flex-direction: column;
-    margin: 4px;
-    width: 100%;
-    border: 1px solid;
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+  width: 80%;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  border: none;
+  position: relative;
+  z-index: 50;
 }
-.pageScrollerLoader{
-border: 1px solid;
+.progressLoader {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 0%;
+  height: 6px;
+  background-color: #f48b0a;
+  justify-content: start;
+  align-items: start;
+  transition: .3s linear;
 }
-.introContainer{
+.introSec {
   border: 1px solid;
   width: 100%;
+  min-height: 600px;
+  margin: 7px 0px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
