@@ -1,0 +1,17 @@
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    width: 100%;
+    border: 1px solid;
+}
+.pageScrollerLoader{
+border: 1px solid;
+}
+.introContainer{
+  border: 1px solid;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
