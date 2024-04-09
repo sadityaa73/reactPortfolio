@@ -46,6 +46,8 @@
     height: 47px;
     width: 96%;
     margin: 2px;
+    font-size: 25px;
+    transition: .2s ease-in-out;
 }
 .anchor img{
     margin: 0px 5px;
@@ -68,7 +70,9 @@
     height: 100%;
 }
 .anchor:hover {
+    color:#ddba07;
     border: 1px;
+    font-size: 30px;
     border-radius: 7px;
     box-shadow: 0px 3px 10px -1px rgb(45 43 43 / 71%);
     left: 1%;
