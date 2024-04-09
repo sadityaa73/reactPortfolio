@@ -1,7 +1,6 @@
 .contentContainer {
   display: flex;
   flex-direction: column;
-  margin: 4px;
   width: 80%;
   height: 100vh;
   overflow: auto;
@@ -17,7 +16,7 @@
   top:0;
   width: 0%;
   height: 6px;
-  background-color: #f48b0a;
+  background-color: #ddba07;
   justify-content: start;
   align-items: start;
   transition: .3s linear;
