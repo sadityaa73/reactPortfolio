@@ -13,13 +13,150 @@
   display: flex;
   position: fixed;
   left: 0;
-  top:0;
+  top: 0;
   width: 0%;
   height: 6px;
   background-color: #ddba07;
   justify-content: start;
   align-items: start;
-  transition: .3s linear;
+  transition: 0.3s linear;
+}
+.back {
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
+}
+.contact {
+  border: 1px solid;
+  position: fixed;
+  top: 3%;
+  left: 82%;
+  width: 10%;
+  height: 10%;
+  border-radius: 9px;
+  transition: .4s ease-in-out;
+}
+.contact:hover{
+  width: 17%;
+  height: 15%;
+}
+.contact-img {
+  position: sticky;
+  top: 0px;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.skill1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 41%;
+  top: 10%;
+}
+.skill2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 69%;
+  top: 11%;
+}
+.skill3 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 46%;
+  top: 61%;
+}
+.skill4 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 73%;
+  top: 52%;
+}
+.skill5 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 91%;
+  top: 32%;
+}
+.skill6 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 18%;
+  top: 52%;
+}
+.skill7 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 4%;
+  top: 40%;
+}
+.sec1Content {
+  width: 762px;
+  height: 331px;
+  position: absolute;
+  top: 14%;
+  border-radius: 15px;
+}
+.yellow {
+  width: 84px;
+  height: 79px;
+  border-radius: 7px;
+  background: #ddba07;
+  box-shadow: 0px 2px 6px 5px #b79a33;
+}
+.sec1_content {
+  width: 671px;
+  height: 31vh;
+  border-radius: 8px;
+  position: absolute;
+  top: 41px;
+  left: 41px;
+  background: #f4f3f34f;
+  box-shadow: 1px 1px 7px 2px #ede0b7;
+}
+.btn-readMore {
+  position: absolute;
+  top: 70%;
+  left: 42%;
+  border: 1px solid;
+  width: 123px;
+  height: 42px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 11px;
+  background-color: #ddba40;
+}
+.btn-readMore h6 {
+  font-size: 17px;
+}
+.btn-readMore span {
+  display: flex;
+  justify-content: center;
+}
+.btn-readMore img {
+  position: absolute;
+  top: -3px;
+  transition: 0.4s ease;
+  animation: more 2s infinite;
+  width: 26px;
+  height: 24px;
+  margin-left: 9px;
+}
+@keyframes more {
+  0% {
+    top: -3px;
+  }
+  100% {
+    top: 15px;
+  }
 }
 .introSec {
   border: 1px solid;
