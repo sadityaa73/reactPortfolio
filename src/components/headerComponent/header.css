@@ -6,13 +6,23 @@
     margin: 4px;
     width: calc((100vw / 12)* 2.5);
     height: 100vh;
-    transition: .2s ease-in-out;
     position: sticky;
     top: 0;
+    left: 0%;
+    transition: 1s ease-in-out;
 }
 .header:hover{
     box-shadow: 6px 2px 3px 0px #ddba07;
-    transition: .2s ease-in-out;
+    left: 3%;
+    animation: dynamicMargin 1s ease-in-out;
+}
+@keyframes dynamicMargin {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 3%;
+    }
 }
 .dpContainer{
     border-radius: 87px;
@@ -50,6 +60,7 @@
     margin: 2px;
     font-size: 25px;
     transition: .2s ease-in-out;
+    border-radius: 7px;
 }
 .anchor img{
     margin: 0px 5px;

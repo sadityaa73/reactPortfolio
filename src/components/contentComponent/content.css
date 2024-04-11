@@ -21,6 +21,7 @@
   align-items: start;
   transition: 0.3s linear;
   box-shadow: 0px 3px 8px 3px #a5a4a0;
+  z-index: 1000;
 }
 .back {
   width: 100%;
@@ -58,37 +59,37 @@
   width: 28%;
   height: 100%;
   position: fixed;
-  top:1%;
+  top: 1%;
   left: 100%;
   border-radius: 6px;
   background-color: white;
   z-index: 100;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
-input:active{
-  border:none
+input:active {
+  border: none;
 }
-.back-btn{
+.back-btn {
   display: flex;
   justify-content: flex-start;
   margin: 17px 0px 0px 9px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.back-btn:hover{
+.back-btn:hover {
   margin: 17px 0px 0px 0px;
 }
-.btn{
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  border:none;
+  border: none;
   font-size: 30px;
 }
-.btn:hover{
-  color:#b79a33;
+.btn:hover {
+  color: #b79a33;
 }
-.send-btn{
+.send-btn {
   margin-top: 82px;
   width: 88%;
   height: 6%;
@@ -96,16 +97,16 @@ input:active{
   justify-content: flex-end;
   align-items: center;
 }
-.send{
+.send {
   height: 70%;
   width: 33%;
   border: none;
   background-color: #ddba40;
   box-shadow: 0px 0px 4px 0px #debc42;
   border-radius: 7px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.send:hover{
+.send:hover {
   height: 75%;
   width: 38%;
 }
@@ -115,6 +116,7 @@ input:active{
   height: 50px;
   left: 41%;
   top: 10%;
+  animation:dynamicMove 8s linear infinite;
 }
 .skill2 {
   position: absolute;
@@ -122,6 +124,7 @@ input:active{
   height: 50px;
   left: 69%;
   top: 11%;
+  animation: dynamicMove 8s linear infinite;
 }
 .skill3 {
   position: absolute;
@@ -129,6 +132,7 @@ input:active{
   height: 50px;
   left: 46%;
   top: 61%;
+  animation: dynamicMove 8s linear infinite;
 }
 .skill4 {
   position: absolute;
@@ -136,6 +140,7 @@ input:active{
   height: 50px;
   left: 86%;
   top: 55%;
+  animation:dynamicMove 8s linear infinite;
 }
 .skill5 {
   position: absolute;
@@ -143,6 +148,7 @@ input:active{
   height: 50px;
   left: 80%;
   top: 32%;
+  animation: dynamicMove 8s linear infinite;
 }
 .skill6 {
   position: absolute;
@@ -150,6 +156,7 @@ input:active{
   height: 50px;
   left: 18%;
   top: 57%;
+  animation:dynamicMove 8s linear infinite;
 }
 .skill7 {
   position: absolute;
@@ -157,6 +164,15 @@ input:active{
   height: 50px;
   left: 4%;
   top: 40%;
+  animation: dynamicMove 8s linear infinite;
+}
+@keyframes dynamicMove{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }
 .sec1Content {
   width: 762px;
@@ -179,7 +195,7 @@ input:active{
   position: absolute;
   top: 32px;
   left: 37px;
-  background: #f4f3f34f;
+  background: white;
   box-shadow: 1px 1px 7px 2px #ede0b7;
 }
 .text-anim-type {
@@ -204,7 +220,7 @@ input:active{
 }
 .btn-readMore {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 42%;
   width: 123px;
   height: 42px;
@@ -213,6 +229,7 @@ input:active{
   align-items: center;
   border-radius: 11px;
   box-shadow: 0px 2px 6px 5px #b79a33;
+  cursor: pointer;
 }
 
 .btn-readMore h6 {
@@ -247,11 +264,189 @@ input:active{
   }
 }
 .introSec {
-  border: 1px solid;
+  /* border: 1px solid;  /* border: 1px solid; */
   width: 100%;
-  min-height: 600px;
+  min-height: 750px;
   margin: 7px 0px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.skill-section {
+  /* border: 1px solid; */
+  width: 100%;
+  min-height: 750px;
+  margin: 7px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec02-skill {
+  width: 50%;
+  height: 28%;
+  position: sticky;
+  left: 51px;
+  display: none;
+  margin-top: 73px;
+  animation: up-down 2s ease-in-out;
+}
+@keyframes up-down{
+  0%{
+    margin-top:0px;
+  }
+  100%{
+    margin-top: 73px;
+  }
+}
+.sec02-yellow {
+  position: absolute;
+  top: 0%;
+  width: 69px;
+  height: 59px;
+  border-radius: 7px;
+  background: #ddba07;
+  box-shadow: 0px 2px 6px 5px #b79a33;
+}
+.sec02-content {
+  width: 331px;
+  height: 12vh;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 1px 1px 7px 2px #ede0b7;
+}
+.sec02-belowline{
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  left: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -54px;
+  animation: dynamicLeft 2s ease-in-out;
+}
+@keyframes dynamicLeft{
+ 0%{
+  left: -100%;
+ }
+ 100%{
+  left:2%;
+ }
+}
+.sec02-skill-container {
+  /* border: 1px solid; */
+  position: absolute;
+  width: 90%;
+  height: 34%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25%;
+  animation: dynamicRight 2s ease-in-out;
+}
+@keyframes dynamicRight{
+  0%{
+    right:-100%;
+  }
+  100%{
+    right:5%;
+  }
+}
+.skills{
+  width: 121px;
+  border: 1px solid;
+  height: 112px;
+  border-radius: 8px;
+  margin: 6px;
+  overflow: hidden;
+  transition: .2s ease-in-out;
+}
+.skills:hover{
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.skill-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.portfolio-section{
+  width: 100%;
+  min-height: 750px;
+  margin: 7px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-sec03{
+  width: 100%;
+  height: 100%;
+}
+.sec03-porfolio{
+  width: 50%;
+  height: 28%;
+  position: sticky;
+  left: 51px;
+  display: none;
+  margin-top: 73px;
+  animation: up-down 2s ease-in-out;
+}
+@keyframes up-down{
+  0%{
+    margin-top:0px;
+  }
+  100%{
+    margin-top: 73px;
+  }
+}
+.sec03-yellow{
+  position: absolute;
+  top: 0%;
+  width: 69px;
+  height: 59px;
+  border-radius: 7px;
+  background: #ddba07;
+  box-shadow: 0px 2px 6px 5px #b79a33;
+}
+.sec03-content{
+  width: 331px;
+  height: 12vh;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 1px 1px 7px 2px #ede0b7;
+}
+.sec03-belowline {
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  left: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -54px;
+  animation: dynamicLeft 2s ease-in-out;
+}
+@keyframes dynamicLeft{
+  0%{
+   left: -100%;
+  }
+  100%{
+   left:2%;
+  }
+ }
