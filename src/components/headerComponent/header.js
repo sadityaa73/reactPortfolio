@@ -5,13 +5,13 @@ import profolio from  "./assets/porfolio.png";
 import code from "./assets/code.png";
 import insta from "./assets/instagram.png";
 import facebook from "./assets/facebook.png";
-import dp from "./assets/profile.png"
+import dp from "./assets/dp1.jpg";
 export default function Header() {
   return (
     <div className="header">
       <div className="dpContainer">
         <div className="dp">
-          <img src={dp} alt="dp image" />
+          <img src={dp} alt="dp image" style={{borderRadius:"5px",objectFit:"cover"}}/>
         </div>
       </div>
       <div className="navigationContainer">
