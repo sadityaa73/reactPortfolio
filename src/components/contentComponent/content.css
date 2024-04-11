@@ -15,38 +15,99 @@
   left: 0;
   top: 0;
   width: 0%;
-  height: 6px;
+  height: 4px;
   background-color: #ddba07;
   justify-content: start;
   align-items: start;
   transition: 0.3s linear;
+  box-shadow: 0px 3px 8px 3px #a5a4a0;
 }
 .back {
   width: 100%;
   height: 100%;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
+
 .contact {
-  border: 1px solid;
   position: fixed;
   top: 3%;
   left: 82%;
   width: 10%;
   height: 10%;
   border-radius: 9px;
-  transition: .4s ease-in-out;
+  transition: 0.4s all ease-in-out;
+  z-index: 100;
 }
-.contact:hover{
-  width: 17%;
-  height: 15%;
+.contact:hover {
+  box-shadow: 3px 3px 12px 2px #e6b640;
+}
+.contact:hover {
+  width: 15%;
+  height: 12%;
 }
 .contact-img {
   position: sticky;
   top: 0px;
-  background-color: green;
   width: 100%;
   height: 100%;
   border-radius: inherit;
+  object-fit: cover;
+}
+.contactCard {
+  border: 1px solid;
+  width: 28%;
+  height: 100%;
+  position: fixed;
+  top:1%;
+  left: 100%;
+  border-radius: 6px;
+  background-color: white;
+  z-index: 100;
+  transition: .4s ease-in-out;
+}
+input:active{
+  border:none
+}
+.back-btn{
+  display: flex;
+  justify-content: flex-start;
+  margin: 17px 0px 0px 9px;
+  transition: .2s ease-in-out;
+}
+.back-btn:hover{
+  margin: 17px 0px 0px 0px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border:none;
+  font-size: 30px;
+}
+.btn:hover{
+  color:#b79a33;
+}
+.send-btn{
+  margin-top: 82px;
+  width: 88%;
+  height: 6%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.send{
+  height: 70%;
+  width: 33%;
+  border: none;
+  background-color: #ddba40;
+  box-shadow: 0px 0px 4px 0px #debc42;
+  border-radius: 7px;
+  transition: .2s ease-in-out;
+}
+.send:hover{
+  height: 75%;
+  width: 38%;
 }
 .skill1 {
   position: absolute;
@@ -73,14 +134,14 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 73%;
-  top: 52%;
+  left: 86%;
+  top: 55%;
 }
 .skill5 {
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 91%;
+  left: 80%;
   top: 32%;
 }
 .skill6 {
@@ -88,7 +149,7 @@
   width: 50px;
   height: 50px;
   left: 18%;
-  top: 52%;
+  top: 57%;
 }
 .skill7 {
   position: absolute;
@@ -116,26 +177,53 @@
   height: 31vh;
   border-radius: 8px;
   position: absolute;
-  top: 41px;
-  left: 41px;
+  top: 32px;
+  left: 37px;
   background: #f4f3f34f;
   box-shadow: 1px 1px 7px 2px #ede0b7;
+}
+.text-anim-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.line {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 17px;
+}
+.belowline {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 17px;
+  position: absolute;
+  top: 80%;
+  left: 5%;
 }
 .btn-readMore {
   position: absolute;
   top: 70%;
   left: 42%;
-  border: 1px solid;
   width: 123px;
   height: 42px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 11px;
-  background-color: #ddba40;
+  box-shadow: 0px 2px 6px 5px #b79a33;
 }
+
 .btn-readMore h6 {
   font-size: 17px;
+  transition: 0.2s ease-in-out;
+}
+.btn-readMore :hover {
+  color: #b79a33;
+  text-shadow: 1px 1px 7px 2px #ddba40;
+  font-size: 20px;
+  box-shadow: none;
 }
 .btn-readMore span {
   display: flex;
@@ -148,7 +236,7 @@
   animation: more 2s infinite;
   width: 26px;
   height: 24px;
-  margin-left: 9px;
+  margin-left: 5px;
 }
 @keyframes more {
   0% {
