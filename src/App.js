@@ -4,7 +4,6 @@ import Content from './components/contentComponent/content';
 import { useState } from 'react';
 function App() {
   const[active,setActive]=useState("");
-  const[loc,setloc]=useState("");
 
   const child = (data)=>{
      setActive(data);
@@ -13,7 +12,7 @@ function App() {
   return (
     <div className="mainContainer">
        <Header currentTab={active}/>
-       <Content child={child} loc={loc}/>
+       <Content child={child}/>
     </div>
   );
 }
