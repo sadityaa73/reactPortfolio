@@ -31,19 +31,23 @@ export default function Content(props) {
 
     const isMode = ()=>{
       setMode(prevState => !prevState);
+      console.log(mode);
       if(mode === false)
       {
+        props.Mode(mode);
         document.getElementById("mode-Btn").style.left=`${50}%`;
         document.getElementById("mode-Btn").style.background="#e6b640";
         document.getElementById("mode-Btn").style.color="black";
-        document.getElementById("mode-Btn").innerHTML="dark";
+        document.getElementById("mode-Btn").innerHTML="light";
         
       }
-      else{
+      if(mode === true){
+        props.Mode(mode);
         document.getElementById("mode-Btn").style.left=`${0}%`;
         document.getElementById("mode-Btn").style.background="white";
         document.getElementById("mode-Btn").style.color="black";
-        document.getElementById("mode-Btn").innerHTML="light";
+        document.getElementById("mode-Btn").innerHTML="dark";
+       
       }
     }
 
@@ -90,8 +94,11 @@ export default function Content(props) {
         <div className="pageScrollerLoader">
           <div className="progressLoader" id="myBar" style={{width:`${scroll}%`}}></div>
         </div>
+        <div className="mode-container">
+        <p>Mode</p>
         <div className="mode-btn-container">
-          <button className="mode-btn" id="mode-Btn"  onClick={isMode}>light</button>
+        <button className="mode-btn" id="mode-Btn"  onClick={isMode}>dark</button>
+        </div>
         </div>
         <section className="introSec" id="sec01">
           <div className="back"></div>

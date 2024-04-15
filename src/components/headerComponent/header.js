@@ -11,25 +11,25 @@ export default function Header(props) {
   { 
     document.getElementById(`${props.currentTab}`).style.backgroundColor="#b79a33";
     document.getElementById(`${props.currentTab}`).style.boxShadow="1px 1px 6px -1px #b79a33";
-    document.getElementById("portfolio").style.backgroundColor="white";
-    document.getElementById("who i am").style.backgroundColor="white";
+    document.getElementById("portfolio").style.backgroundColor="transparent";
+    document.getElementById("who i am").style.backgroundColor="transparent";
     document.getElementById("who i am").style.boxShadow="0px 0px 0px 0px";
     document.getElementById("portfolio").style.boxShadow="0px 0px 0px 0px";
   }
   else if( props.currentTab === "portfolio"){
     document.getElementById(`${props.currentTab}`).style.backgroundColor="#b79a33";
     document.getElementById(`${props.currentTab}`).style.boxShadow="1px 1px 6px -1px #b79a33";
-    document.getElementById("home").style.backgroundColor="white";
+    document.getElementById("home").style.backgroundColor="transparent";
     document.getElementById("home").style.boxShadow="0px 0px 0px 0px";
-    document.getElementById("who i am").style.backgroundColor="white";
+    document.getElementById("who i am").style.backgroundColor="transparent";
     document.getElementById("who i am").style.boxShadow="0px 0px 0px 0px";
   }
   else if( props.currentTab === "who i am")
   {
     document.getElementById(`${props.currentTab}`).style.backgroundColor="#b79a33";
     document.getElementById(`${props.currentTab}`).style.boxShadow="1px 1px 6px -1px #b79a33";
-    document.getElementById("home").style.backgroundColor="white";
-    document.getElementById("portfolio").style.backgroundColor="white";
+    document.getElementById("home").style.backgroundColor="transparent";
+    document.getElementById("portfolio").style.backgroundColor="transparent";
     document.getElementById("portfolio").style.boxShadow="0px 0px 0px 0px";
   }
   return (

@@ -3,5 +3,5 @@
   height: 100%;
   border: 1px solid;
   overflow: hidden;
-  background-color: white;
+  transition: 0.5s ease-in-out;
 }
