@@ -16,6 +16,7 @@ import backArrow from "./assets/back arrow.png";
 export default function Content(props) {
     const [scroll, setScroll] = useState(0);
     const[back,setIsBack] = useState(false);
+    const[mode,setMode] = useState(false);
     const isBack = ()=>{
       setIsBack(prevState => !prevState);
        if(back === false)
@@ -27,6 +28,25 @@ export default function Content(props) {
        }
        return back;
     }
+
+    const isMode = ()=>{
+      setMode(prevState => !prevState);
+      if(mode === false)
+      {
+        document.getElementById("mode-Btn").style.left=`${50}%`;
+        document.getElementById("mode-Btn").style.background="#e6b640";
+        document.getElementById("mode-Btn").style.color="black";
+        document.getElementById("mode-Btn").innerHTML="dark";
+        
+      }
+      else{
+        document.getElementById("mode-Btn").style.left=`${0}%`;
+        document.getElementById("mode-Btn").style.background="white";
+        document.getElementById("mode-Btn").style.color="black";
+        document.getElementById("mode-Btn").innerHTML="light";
+      }
+    }
+
     const onScroll = () => {
         const Scrolled = document.getElementById("scrollContainer").scrollTop;
         const MaxHeight =
@@ -70,6 +90,9 @@ export default function Content(props) {
         <div className="pageScrollerLoader">
           <div className="progressLoader" id="myBar" style={{width:`${scroll}%`}}></div>
         </div>
+        <div className="mode-btn-container">
+          <button className="mode-btn" id="mode-Btn"  onClick={isMode}>light</button>
+        </div>
         <section className="introSec" id="sec01">
           <div className="back"></div>
           <div className="contact"onClick={isBack} >
@@ -80,15 +103,15 @@ export default function Content(props) {
               <button className="btn"><span style={{marginTop:"5px"}}><img src={backArrow} alt=""/></span>Back</button>
             </div>
             <div className="contact-conatiner">
-              <p style={{fontSize:"25px",color:"grey",margin:"92px 0px 0px 18px"}}>Contact</p>
-              <h6 style={{fontSize:"26px",color:"black",margin:"10px 0px 0px 18px"}}>sadityaa73@gmail.com</h6>
-              <h6 style={{fontSize:"26px",color:"black",margin:"10px 0px 0px 18px"}}>+91-8709042918</h6>
+              <p className="contact-container-contact">Contact</p>
+              <h6 className="contact-container-email">sadityaa73@gmail.com</h6>
+              <h6 className="contact-container-phone">+91-8709042918</h6>
             </div>
             <hr style={{border:"1px solid black",width:"90%"}}/>
-            <div className="contact-info-container" style={{margin:"0px 0px 0px 18px",width:"100%",height:"30%"}}>
-              <div style={{border: "1px solid black",borderRadius: "5px",width: "80%",marginTop:"20px",overflow:"hidden"}}><input type="text" placeholder="Your Email" style={{border: "none",width: "98%",height:"98%",textAlign: "center",fontSize: "20px",color: "black"}}/></div>
-              <div style={{border: "1px solid black",borderRadius: "5px",width: "80%",marginTop:"20px",overflow:"hidden"}}><input type="text" placeholder="Your Full Name" style={{border: "none",width: "98%",height:"98%",textAlign: "center",fontSize: "20px",color: "black"}}/></div>
-              <div style={{border: "1px solid black",borderRadius: "5px",width: "80%",height:"70%",marginTop:"20px",overflow:"hidden"}}><textarea  placeholder="How Can I Help you ?" style={{border: "none",width: "98%",height:"98%",textAlign: "center",fontSize: "20px",color: "black"}}/></div>
+            <div className="contact-info-container">
+              <div className="contact-container-info-email"><input type="text" placeholder="Your Email"/></div>
+              <div className="contact-container-info-name" ><input type="text" placeholder="Your Full Name"/></div>
+              <div className="contact-container-info-message"><textarea  placeholder="How Can I Help you ?"/></div>
             </div>
             <div className="send-btn"><button className="send">send</button></div>
           </div>
@@ -104,21 +127,21 @@ export default function Content(props) {
             <div className="sec1_content">
               <div className="text-anim-type">
                 <div className="line">
-                  <p style={{margin:"0px",fontSize:"28px",fontFamily:"PT Serif"}}>01</p>
-                  <h2 style={{margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}>{"<"} Hi , I'm <span style={{color:"#ddba07"}}> Aditya </span>{">"}</h2>
+                  <p>01</p>
+                  <h2>{"<"} Hi , I'm <span> Aditya </span>{">"}</h2>
                 </div>
                 <div className="line">
-                  <p style={{margin:"0px",fontSize:"28px",fontFamily:"PT Serif"}}>02</p>
-                  <h2 style={{margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}>{"<"} I <span style={{color:"#ddba07"}} > Design </span><span><img src={design} alt="design" style={{width: "28px",height: "27px",objectFit:"cover"}}/></span> and <span style={{color:"#ddba07"}}> Develop </span><span><img src={develop} alt="develop" style={{width: "28px",height: "27px",objectFit:"cover"}}/></span>{">"}</h2>
+                  <p>02</p>
+                  <h2>{"<"} I <span> Design </span><span><img src={design} alt="design" style={{width: "28px",height: "27px",objectFit:"cover"}}/></span> and <span> Develop </span><span><img src={develop} alt="develop" style={{width: "28px",height: "27px",objectFit:"cover"}}/></span>{">"}</h2>
                 </div>
                 <div className="line">
-                  <p style={{margin:"0px",fontSize:"28px",fontFamily:"PT Serif"}}>03 </p>
-                  <h2 style={{color:"#ddba07",margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}> Web Sites .</h2><h2 style={{margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}> {">"}</h2>
+                  <p>03 </p>
+                  <h2> Web Sites .</h2><h2> {">"}</h2>
                 </div>
               </div>
             </div>
             <div className="belowline">
-                  <h2 style={{color:"black",margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}> I also design your branding logo... </h2>
+                  <h2> I also design your branding logo... </h2>
             </div>
           </div>
           <a className="btn-readMore"><h6>readMore</h6><span><img src={arrow} alt="downArrow"/></span></a>
@@ -128,13 +151,13 @@ export default function Content(props) {
             <div className="sec02-skill" id="sec02Skill">
               <div className="sec02-yellow"></div>
               <div className="sec02-content">
-              <p style={{marginLeft:"11px",fontSize:"28px",fontFamily:"PT Serif"}}>04 </p>
-                  <h2 style={{color:"#ddba07",margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}> Skills.</h2><h2 style={{margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}> {">"}</h2>
+              <p>04 </p>
+                  <h2> Skills.</h2><h2> {">"}</h2>
               </div>
             </div>
           </div>
           <div className="sec02-belowline" id="sec2BelowLine">
-                  <h2 style={{color:"black",margin:"0px",marginLeft:"20px",fontSize:"38px",fontFamily:"PT Serif"}}> Experienced Programmer with Proficiency in C++, JavaScript, Vue.js, Node.js, MongoDB, and More</h2>
+                  <h2> Experienced Programmer with Proficiency in C++, JavaScript, Vue.js, Node.js, MongoDB, and More</h2>
           </div>
           <div className="sec02-skill-container" id="skill-container">
             <div className="skills">
@@ -165,13 +188,13 @@ export default function Content(props) {
             <div className="sec03-porfolio" id="sec03Portfolio">
               <div className="sec03-yellow"></div>
               <div className="sec03-content">
-              <p style={{marginLeft:"11px",fontSize:"28px",fontFamily:"PT Serif"}}>05 </p>
-                  <h2 style={{color:"#ddba07",margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}> Portfolio.</h2><h2 style={{margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}> {">"}</h2>
+              <p>05 </p>
+                  <h2> Portfolio.</h2><h2 style={{margin:"0px",marginLeft:"4px",fontSize:"40px",fontFamily:"PT Serif"}}> {">"}</h2>
               </div>
             </div>
           </div>
           <div className="sec03-belowline" id="sec3BelowLine">
-                  <h2 style={{color:"black",margin:"0px",marginLeft:"20px",fontSize:"38px",fontFamily:"PT Serif"}}> Welcome to my portfolio, where creativity meets functionality, showcasing my passion for Design & Development .</h2>
+                  <h2> Welcome to my portfolio, where creativity meets functionality, showcasing my passion for Design & Development .</h2>
           </div>
         </section>
     </div>
